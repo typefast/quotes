@@ -8,6 +8,9 @@
 </head>
 <body>
   
+<%= link_to "Home", root_path %>
+<%= link_to "New Quote", new_quote_path %>
+  
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, class: name %>
 <% end %>
