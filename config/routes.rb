@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
-  resources :quotes
+  resources :quotes do 
+    member do 
+      put "upvote", to: 'quotes#upvote'
+      put 'downvote', to: 'quotes#downvote'
+    end
+  end
   root 'quotes#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
