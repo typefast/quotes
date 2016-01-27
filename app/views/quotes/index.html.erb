@@ -4,4 +4,14 @@
   <%= quote.quote %><br>
   <%= quote.author %>
   <%= link_to "Read More", quote_path(quote) %>
+  
+  <%= link_to upvote_quote_path(quote), method: :put do %>
+    Upvote
+    <%= quote.get_upvotes.size %>
+  <% end %>
+  
+  <%= link_to downvote_quote_path(quote), method: :put do %>
+    Downvote
+    <%= quote.get_downvotes.size %>
+  <% end %>
 <% end %>
