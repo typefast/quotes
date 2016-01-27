@@ -1,2 +1,6 @@
-<h1>Quotes#new</h1>
-<p>Find me in app/views/quotes/new.html.erb</p>
+<h3>New Quote</h3>
+<%= form_for @quote do |f| %>
+  <%= f.text_area :quote, :placeholder => "Quote..." %>
+  <%= f.text_field :author, :placeholder => "Author" %>
+  <%= f.submit "Submit" %>
+<% end %>
