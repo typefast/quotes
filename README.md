@@ -1,0 +1,1 @@
+Rails quotes app vote on quote
