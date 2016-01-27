@@ -1,7 +1,7 @@
 <h3>Quotes</h3>
 
 <% @quotes.each do |quote| %>
-  <%= quote.quote %>
+  <%= quote.quote %><br>
   <%= quote.author %>
   <%= link_to "Read More", quote_path(quote) %>
 <% end %>
