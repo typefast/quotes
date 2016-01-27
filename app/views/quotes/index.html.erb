@@ -3,5 +3,5 @@
 <% @quotes.each do |quote| %>
   <%= quote.quote %>
   <%= quote.author %>
-  <%= link_to "Read More", quote_path %>
+  <%= link_to "Read More", quote_path(quote) %>
 <% end %>
