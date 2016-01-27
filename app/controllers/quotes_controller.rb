@@ -4,7 +4,7 @@ class QuotesController < ApplicationController
   end
 
   def new
-    @quote = Quote.find(params[:id])
+    @quote = Quote.new
   end
   
   def create
