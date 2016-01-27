@@ -29,8 +29,8 @@ class QuotesController < ApplicationController
   end
   
   def downvote
-    @link = Link.find(params[:id])
-    @link.downvote_by current_user
+    @quote = Quote.find(params[:id])
+    @quote.downvote_by current_user
     redirect_to :back
   end
   
