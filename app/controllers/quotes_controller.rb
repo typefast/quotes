@@ -22,6 +22,18 @@ class QuotesController < ApplicationController
     @quote = Quote.find(params[:id])
   end
   
+  def upvote
+    @quote = Quote.find(params[:id])
+    @quote.upvote_by current_user
+    redirect_to :back
+  end
+  
+  def downvote
+    @link = Link.find(params[:id])
+    @link.downvote_by current_user
+    redirect_to :back
+  end
+  
   private
     def quote_params
       params.require(:quote).permit(:quote, :author)
